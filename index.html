@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Features Demo</title>
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <h1>HTML5 Elements Showcase</h1>
+        <nav>
+            <ul>
+                <li><a href="#lists">Lists</a></li>
+                <li><a href="#images">Images</a></li>
+                <li><a href="#tables">Tables</a></li>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href="#multimedia">Multimedia</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <!-- Ordered List with Roman Numerals Section -->
+        <section id="lists">
+            <h2>Ordered List with Roman Numerals</h2>
+            <h3>Web Development Learning Path</h3>
+            <ol type="I">
+                <li>HTML Fundamentals
+                    <ul>
+                        <li>Document Structure</li>
+                        <li>Semantic Elements</li>
+                        <li>Forms and Input Types</li>
+                    </ul>
+                </li>
+                <li>CSS Styling
+                    <ul>
+                        <li>Selectors and Properties</li>
+                        <li>Layout Techniques</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </li>
+                <li>JavaScript Basics
+                    <ul>
+                        <li>Syntax and Variables</li>
+                        <li>Functions and Objects</li>
+                        <li>DOM Manipulation</li>
+                    </ul>
+                </li>
+                <li>Advanced Frontend Development
+                    <ul>
+                        <li>Frameworks (React, Vue, Angular)</li>
+                        <li>State Management</li>
+                        <li>API Integration</li>
+                    </ul>
+                </li>
+                <li>Backend Development
+                    <ul>
+                        <li>Server-side Languages</li>
+                        <li>Databases</li>
+                        <li>Authentication</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Image Section -->
+        <section id="images">
+            <h2>Featured Image</h2>
+            <figure>
+                <img src="https://images.pexels.com/photos/270373/pexels-photo-270373.jpeg" 
+                     alt="Laptop with code on screen" 
+                     width="600" 
+                     height="400">
+                <figcaption>Programming and web development - Photo by Pixabay from Pexels</figcaption>
+            </figure>
+        </section>
+
+        <!-- Table Section -->
+        <section id="tables">
+            <h2>Contact Directory</h2>
+            <table border="1">
+                <caption>Important Contacts</caption>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Smith</td>
+                        <td>123 Tech Lane, Silicon Valley, CA</td>
+                        <td>(555) 123-4567</td>
+                        <td>john.smith@example.com</td>
+                        <td>Development</td>
+                    </tr>
+                    <tr>
+                        <td>Sarah Johnson</td>
+                        <td>456 Web Avenue, Boston, MA</td>
+                        <td>(555) 234-5678</td>
+                        <td>sarah.j@example.com</td>
+                        <td>Design</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Brown</td>
+                        <td>789 Coding Street, Austin, TX</td>
+                        <td>(555) 345-6789</td>
+                        <td>michael.b@example.com</td>
+                        <td>Product</td>
+                    </tr>
+                    <tr>
+                        <td>Emily Davis</td>
+                        <td>101 Script Road, Seattle, WA</td>
+                        <td>(555) 456-7890</td>
+                        <td>emily.d@example.com</td>
+                        <td>Marketing</td>
+                    </tr>
+                    <tr>
+                        <td>Robert Wilson</td>
+                        <td>202 Frontend Blvd, Portland, OR</td>
+                        <td>(555) 567-8901</td>
+                        <td>robert.w@example.com</td>
+                        <td>Support</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Form Section -->
+        <section id="forms">
+            <h2>Registration Form</h2>
+            <form action="/submit-registration" method="post">
+                <!-- Personal Information -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <div>
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required minlength="2" maxlength="50">
+                    </div>
+                    
+                    <div>
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                    </div>
+                    
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Create a strong password" 
+                            required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+                    </div>
+                    
+                    <div>
+                        <label for="birthdate">Date of Birth:</label>
+                        <input type="date" id="birthdate" name="birthdate" required>
+                    </div>
+                </fieldset>
+
+                <!-- Additional Details -->
+                <fieldset>
+                    <legend>Additional Details</legend>
+                    
+                    <div>
+                        <label for="country">Country:</label>
+                        <select id="country" name="country" required>
+                            <option value="">Select your country</option>
+                            <option value="us">United States</option>
+                            <option value="ca">Canada</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="au">Australia</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <p>Gender:</p>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label><br>
+                        
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label><br>
+                        
+                        <input type="radio" id="nonbinary" name="gender" value="nonbinary">
+                        <label for="nonbinary">Non-binary</label><br>
+                        
+                        <input type="radio" id="prefer-not" name="gender" value="prefer-not">
+                        <label for="prefer-not">Prefer not to say</label>
+                    </div>
+                    
+                    <div>
+                        <p>Interests (check all that apply):</p>
+                        <input type="checkbox" id="web-dev" name="interests" value="web-dev">
+                        <label for="web-dev">Web Development</label><br>
+                        
+                        <input type="checkbox" id="mobile-dev" name="interests" value="mobile-dev">
+                        <label for="mobile-dev">Mobile Development</label><br>
+                        
+                        <input type="checkbox" id="data-science" name="interests" value="data-science">
+                        <label for="data-science">Data Science</label><br>
+                        
+                        <input type="checkbox" id="ui-ux" name="interests" value="ui-ux">
+                        <label for="ui-ux">UI/UX Design</label>
+                    </div>
+                </fieldset>
+
+                <!-- Terms and Submit -->
+                <div>
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the terms and conditions</label>
+                </div>
+                
+                <div>
+                    <button type="submit">Register</button>
+                    <button type="reset">Clear Form</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Multimedia Section -->
+        <section id="multimedia">
+            <h2>Multimedia Content</h2>
+            
+            <!-- Audio Player -->
+            <h3>Audio Sample</h3>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            
+            <!-- Video Player -->
+            <h3>Video Sample</h3>
+            <video width="560" height="315" controls>
+                <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+            
+            <!-- Embedded Content -->
+            <h3>Embedded YouTube Video</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/pQN-pnXPaVg" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2025 HTML5 Demo. All rights reserved.</p>
+        <address>
+            Contact us: <a href="mailto:info@html5demo.com">info@html5demo.com</a>
+        </address>
+    </footer>
+</body>
+</html>
